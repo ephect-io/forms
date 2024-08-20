@@ -2,8 +2,8 @@
 
 namespace Ephect\Forms\Components\Generators;
 
-use Ephect\Forms\ComponentEntity;
-use Ephect\Forms\ComponentStructure;
+use Ephect\Forms\Components\ComponentEntity;
+use Ephect\Forms\Components\ComponentStructure;
 
 class RawHtmlParser implements RawHtmlParserInterface
 {

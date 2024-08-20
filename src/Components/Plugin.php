@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components;
 
-use Ephect\Forms\Application\ApplicationComponent;
+use Ephect\Forms\Components\Application\ApplicationComponent;
 use Ephect\Framework\ElementUtils;
 use Ephect\Framework\Registry\ComponentRegistry;
 use Ephect\Framework\Registry\PluginRegistry;

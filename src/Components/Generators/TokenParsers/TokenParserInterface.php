@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
-use Ephect\Forms\Generators\ParserServiceInterface;
+use Ephect\Forms\Components\Generators\ParserServiceInterface;
 
 interface TokenParserInterface extends ParserServiceInterface
 {

@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Builders;
 
-use Ephect\Forms\Validators\PropsValidator;
+use Ephect\Forms\Components\Validators\PropsValidator;
 use Ephect\Framework\ElementInterface;
 use ErrorException;
 

@@ -2,14 +2,14 @@
 
 namespace Ephect\Forms\Components\Application;
 
-use Ephect\Forms\ComponentDeclaration;
-use Ephect\Forms\ComponentDeclarationStructure;
-use Ephect\Forms\ComponentEntity;
-use Ephect\Forms\ComponentEntityInterface;
-use Ephect\Forms\ComponentFactory;
-use Ephect\Forms\ComponentInterface;
-use Ephect\Forms\FileComponentInterface;
-use Ephect\Forms\Generators\ParserService;
+use Ephect\Forms\Components\ComponentDeclaration;
+use Ephect\Forms\Components\ComponentDeclarationStructure;
+use Ephect\Forms\Components\ComponentEntity;
+use Ephect\Forms\Components\ComponentEntityInterface;
+use Ephect\Forms\Components\ComponentFactory;
+use Ephect\Forms\Components\ComponentInterface;
+use Ephect\Forms\Components\FileComponentInterface;
+use Ephect\Forms\Components\Generators\ParserService;
 use Ephect\Framework\ElementTrait;
 use Ephect\Framework\ElementUtils;
 use Ephect\Framework\Registry\CacheRegistry;

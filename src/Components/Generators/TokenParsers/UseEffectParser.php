@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
-use Ephect\Forms\Generators\TypesParserTrait;
+use Ephect\Forms\Components\Generators\TypesParserTrait;
 
 final class UseEffectParser extends AbstractTokenParser
 {

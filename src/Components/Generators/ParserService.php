@@ -2,24 +2,24 @@
 
 namespace Ephect\Forms\Components\Generators;
 
-use Ephect\Forms\FileComponentInterface;
-use Ephect\Forms\Generators\TokenParsers\ArraysParser;
-use Ephect\Forms\Generators\TokenParsers\ChildrenDeclarationParser;
-use Ephect\Forms\Generators\TokenParsers\ChildSlotsParser;
-use Ephect\Forms\Generators\TokenParsers\ClosedComponentsParser;
-use Ephect\Forms\Generators\TokenParsers\EmptyComponentsParser;
-use Ephect\Forms\Generators\TokenParsers\FragmentsParser;
-use Ephect\Forms\Generators\TokenParsers\HeredocParser;
-use Ephect\Forms\Generators\TokenParsers\HtmlParser;
-use Ephect\Forms\Generators\TokenParsers\ModuleComponentParser;
-use Ephect\Forms\Generators\TokenParsers\NamespaceParser;
-use Ephect\Forms\Generators\TokenParsers\OpenComponentsParser;
-use Ephect\Forms\Generators\TokenParsers\ReturnTypeParser;
-use Ephect\Forms\Generators\TokenParsers\UseEffectParser;
-use Ephect\Forms\Generators\TokenParsers\UsesAsParser;
-use Ephect\Forms\Generators\TokenParsers\UsesParser;
-use Ephect\Forms\Generators\TokenParsers\UseVariablesParser;
-use Ephect\Forms\Generators\TokenParsers\View\InlineCodeParser;
+use Ephect\Forms\Components\FileComponentInterface;
+use Ephect\Forms\Components\Generators\TokenParsers\ArraysParser;
+use Ephect\Forms\Components\Generators\TokenParsers\ChildrenDeclarationParser;
+use Ephect\Forms\Components\Generators\TokenParsers\ChildSlotsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\ClosedComponentsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\EmptyComponentsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\FragmentsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\HeredocParser;
+use Ephect\Forms\Components\Generators\TokenParsers\HtmlParser;
+use Ephect\Forms\Components\Generators\TokenParsers\ModuleComponentParser;
+use Ephect\Forms\Components\Generators\TokenParsers\NamespaceParser;
+use Ephect\Forms\Components\Generators\TokenParsers\OpenComponentsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\ReturnTypeParser;
+use Ephect\Forms\Components\Generators\TokenParsers\UseEffectParser;
+use Ephect\Forms\Components\Generators\TokenParsers\UsesAsParser;
+use Ephect\Forms\Components\Generators\TokenParsers\UsesParser;
+use Ephect\Forms\Components\Generators\TokenParsers\UseVariablesParser;
+use Ephect\Forms\Components\Generators\TokenParsers\View\InlineCodeParser;
 use Ephect\Framework\Registry\ComponentRegistry;
 
 class ParserService implements ParserServiceInterface

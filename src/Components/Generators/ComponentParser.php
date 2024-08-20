@@ -2,8 +2,8 @@
 
 namespace Ephect\Forms\Components\Generators;
 
-use Ephect\Forms\ComponentDeclarationStructure;
-use Ephect\Forms\ComponentInterface;
+use Ephect\Forms\Components\ComponentDeclarationStructure;
+use Ephect\Forms\Components\ComponentInterface;
 use Ephect\Framework\Crypto\Crypto;
 use Ephect\Framework\Registry\ComponentRegistry;
 

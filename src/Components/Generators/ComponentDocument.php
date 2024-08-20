@@ -2,10 +2,9 @@
 
 namespace Ephect\Forms\Components\Generators;
 
-use Ephect\Forms\ComponentEntity;
-use Ephect\Forms\ComponentInterface;
-use Ephect\Forms\ComponentStructure;
-use Ephect\Framework\Xml\XmlDocument;
+use Ephect\Forms\Components\ComponentEntity;
+use Ephect\Forms\Components\ComponentInterface;
+use Ephect\Forms\Components\ComponentStructure;
 
 class ComponentDocument
 {

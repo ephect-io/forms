@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
-use Ephect\Forms\ComponentEntityInterface;
+use Ephect\Forms\Components\ComponentEntityInterface;
 use Ephect\Framework\Middlewares\AttributeMiddlewareInterface;
 use Ephect\Framework\Middlewares\ComponentParserMiddlewareInterface;
 use Ephect\Framework\Registry\ComponentRegistry;

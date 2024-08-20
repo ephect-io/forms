@@ -2,8 +2,8 @@
 
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
-use Ephect\Forms\Component;
-use Ephect\Forms\Generators\ComponentDocument;
+use Ephect\Forms\Components\Component;
+use Ephect\Forms\Components\Generators\ComponentDocument;
 use Ephect\Framework\Registry\ComponentRegistry;
 use Ephect\Framework\Utils\File;
 use JetBrains\PhpStorm\Deprecated;
