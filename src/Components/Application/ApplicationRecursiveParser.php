@@ -2,10 +2,10 @@
 
 namespace Ephect\Forms\Components\Application;
 
-use Ephect\Forms\Component;
-use Ephect\Forms\FileComponentInterface;
-use Ephect\Forms\Generators\ComponentParser;
-use Ephect\Forms\Generators\ParserService;
+use Ephect\Forms\Components\Component;
+use Ephect\Forms\Components\FileComponentInterface;
+use Ephect\Forms\Components\Generators\ComponentParser;
+use Ephect\Forms\Components\Generators\ParserService;
 use Ephect\Framework\Registry\CodeRegistry;
 use Ephect\Framework\Utils\File;
 
