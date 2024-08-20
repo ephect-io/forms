@@ -1,0 +1,26 @@
+{
+    "name": "ephect-io/forms",
+    "type": "library",
+    "homepage": "https://example.com",
+    "license": "GPL-3.0+",
+    "version": "0.7.2",
+    "autoload": {
+        "psr-4": {
+            "Ephect\\Forms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "ephect-io/framework": "dev-remove_components"
+    },
+    "bin": [
+        "bin/ephect-io_forms_install.sh",
+        "bin/ephect-io_forms_install.bat"
+    ]
+}
