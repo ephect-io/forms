@@ -12,7 +12,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "ephect-io/framework": "dev-remove_components"
+        "ephect-io/framework": "dev-develop"
     },
     "bin": [
         "bin/ephect-io_forms_install.sh",
