@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Application;
 
-use Ephect\Framework\Web\Request;
+use Ephect\WebApp\Web\Request;
 use Ephect\Plugins\Router\RouterService;
 use ReflectionFunction;
 use stdClass;

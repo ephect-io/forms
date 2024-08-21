@@ -19,7 +19,7 @@ use Ephect\Framework\Registry\StateRegistry;
 use Ephect\Framework\Tree\Tree;
 use Ephect\Framework\Utils\File;
 use Ephect\Framework\Web\ApplicationIgniter;
-use Ephect\Framework\Web\Request;
+use Ephect\WebApp\Web\Request;
 use Exception;
 use ReflectionException;
 
