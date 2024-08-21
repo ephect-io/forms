@@ -20,7 +20,7 @@ use Ephect\Forms\Components\Generators\TokenParsers\UsesAsParser;
 use Ephect\Forms\Components\Generators\TokenParsers\UsesParser;
 use Ephect\Forms\Components\Generators\TokenParsers\UseVariablesParser;
 use Ephect\Forms\Components\Generators\TokenParsers\View\InlineCodeParser;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 class ParserService implements ParserServiceInterface
 {
@@ -39,11 +39,6 @@ class ParserService implements ParserServiceInterface
         return $this->children;
     }
 
-    public function getResult(): null|string|array|bool
-    {
-        return $this->result;
-    }
-
     public function doChildSlots(FileComponentInterface $component): void
     {
         $p = new ChildSlotsParser($component);
@@ -55,6 +50,11 @@ class ParserService implements ParserServiceInterface
     public function getHtml(): string
     {
         return $this->html;
+    }
+
+    public function getResult(): null|string|array|bool
+    {
+        return $this->result;
     }
 
     public function doUses(FileComponentInterface $component): void
@@ -90,13 +90,6 @@ class ParserService implements ParserServiceInterface
         $this->html = $p->getHtml();
     }
 
-    public function doHtml(FileComponentInterface $component): void
-    {
-        $p = new HtmlParser($component);
-        $p->do();
-        $this->result = $p->getResult();
-    }
-
     public function doInlineCode(FileComponentInterface $component): void
     {
         $this->doHtml($component);
@@ -109,17 +102,22 @@ class ParserService implements ParserServiceInterface
         ]);
         $phtml = $p->getResult();
 
-        $this->html = str_replace($text,  $phtml, $this->html);
+        $this->html = str_replace($text, $phtml, $this->html);
 
         $this->useVariables = $p->getUseVariables();
         $this->funcVariables = $p->getFuncVariables();
     }
 
-    public function doChildrenDeclaration(FileComponentInterface $component): void
+    public function doHtml(FileComponentInterface $component): void
     {
-        $p = new ChildrenDeclarationParser($component);
+        $p = new HtmlParser($component);
         $p->do();
-        $this->children = (object)$p->getResult();
+        $this->result = $p->getResult();
+    }
+
+    public function getUseVariables(): ?array
+    {
+        return $this->useVariables;
     }
 
     public function getFuncVariables(): ?array
@@ -127,9 +125,11 @@ class ParserService implements ParserServiceInterface
         return $this->funcVariables;
     }
 
-    public function getUseVariables(): ?array
+    public function doChildrenDeclaration(FileComponentInterface $component): void
     {
-        return $this->useVariables;
+        $p = new ChildrenDeclarationParser($component);
+        $p->do();
+        $this->children = (object)$p->getResult();
     }
 
     public function doArrays(FileComponentInterface $component): void

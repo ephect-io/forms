@@ -3,8 +3,8 @@
 namespace Ephect\Forms\Components;
 
 use Ephect\Forms\Components\Application\ApplicationComponent;
-use Ephect\Framework\Registry\ComponentRegistry;
 use Ephect\Forms\Registry\PluginRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 class ComponentFactory
 {

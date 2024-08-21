@@ -5,7 +5,7 @@ namespace Ephect\Forms\Components\Generators;
 use Ephect\Forms\Components\ComponentDeclarationStructure;
 use Ephect\Forms\Components\ComponentInterface;
 use Ephect\Framework\Crypto\Crypto;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 
 class ComponentParser extends Parser implements ParserInterface
@@ -26,7 +26,7 @@ class ComponentParser extends Parser implements ParserInterface
 
     public function doDeclaration(string $uid = ''): ComponentDeclarationStructure
     {
-        if($uid == '') {
+        if ($uid == '') {
             $uid = Crypto::createUID();
         }
         $this->doComponents();

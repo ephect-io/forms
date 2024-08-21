@@ -3,9 +3,9 @@
 namespace Ephect\Forms\Components;
 
 use Ephect\Forms\Components\Application\ApplicationComponent;
-use Ephect\Framework\ElementUtils;
-use Ephect\Framework\Registry\ComponentRegistry;
 use Ephect\Forms\Registry\PluginRegistry;
+use Ephect\Framework\ElementUtils;
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Utils\File;
 
 class Plugin extends ApplicationComponent implements FileComponentInterface

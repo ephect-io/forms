@@ -3,7 +3,7 @@
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
 use Ephect\Forms\Components\ComponentEntityInterface;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Utils\File;
 
 final class OpenComponentsParser extends AbstractComponentParser
@@ -121,7 +121,6 @@ final class OpenComponentsParser extends AbstractComponentParser
 
         $this->html = $subject;
     }
-
 
 
     private function argumentsKeys(array $componentArgs): ?array

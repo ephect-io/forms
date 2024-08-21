@@ -6,7 +6,7 @@ use Ephect\Forms\Components\ComponentDeclarationStructure;
 use Ephect\Forms\Components\ComponentInterface;
 use Ephect\Framework\CLI\Console;
 use Ephect\Framework\Crypto\Crypto;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 class Decomposer extends Parser implements ParserInterface
 {

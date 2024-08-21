@@ -2,7 +2,7 @@
 
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 final class UsesAsParser extends AbstractTokenParser
 {

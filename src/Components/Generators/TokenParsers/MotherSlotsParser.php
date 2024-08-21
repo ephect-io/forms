@@ -4,7 +4,7 @@ namespace Ephect\Forms\Components\Generators\TokenParsers;
 
 use Ephect\Forms\Components\Component;
 use Ephect\Forms\Components\Generators\ComponentDocument;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Utils\File;
 use JetBrains\PhpStorm\Deprecated;
 

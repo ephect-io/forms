@@ -4,7 +4,7 @@ namespace Ephect\Forms\Components\Application;
 
 use BadFunctionCallException;
 use Ephect\Forms\Registry\CacheRegistry;
-use Ephect\Framework\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\ComponentRegistry;
 
 class ComponentFinder
 {
