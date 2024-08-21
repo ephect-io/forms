@@ -6,7 +6,7 @@ use Ephect\Forms\Components\Component;
 use Ephect\Forms\Components\FileComponentInterface;
 use Ephect\Forms\Components\Generators\ComponentParser;
 use Ephect\Forms\Components\Generators\ParserService;
-use Ephect\Framework\Registry\CodeRegistry;
+use Ephect\Forms\Registry\CodeRegistry;
 use Ephect\Framework\Utils\File;
 
 class ApplicationRecursiveParser

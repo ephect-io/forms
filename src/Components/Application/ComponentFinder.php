@@ -3,7 +3,7 @@
 namespace Ephect\Forms\Components\Application;
 
 use BadFunctionCallException;
-use Ephect\Framework\Registry\CacheRegistry;
+use Ephect\Forms\Registry\CacheRegistry;
 use Ephect\Framework\Registry\ComponentRegistry;
 
 class ComponentFinder

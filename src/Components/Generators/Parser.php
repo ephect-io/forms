@@ -3,7 +3,7 @@
 namespace Ephect\Forms\Components\Generators;
 
 use Ephect\Forms\Components\ComponentInterface;
-use Ephect\Framework\Registry\CodeRegistry;
+use Ephect\Forms\Registry\CodeRegistry;
 
 class Parser implements ParserInterface
 {

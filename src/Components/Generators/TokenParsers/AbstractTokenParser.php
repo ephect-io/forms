@@ -4,7 +4,7 @@ namespace Ephect\Forms\Components\Generators\TokenParsers;
 
 use Ephect\Forms\Components\FileComponentInterface;
 use Ephect\Forms\Components\Generators\ParserServiceInterface;
-use Ephect\Framework\Registry\CodeRegistry;
+use Ephect\Forms\Registry\CodeRegistry;
 
 abstract class AbstractTokenParser implements TokenParserInterface
 {
