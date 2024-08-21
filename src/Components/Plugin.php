@@ -8,21 +8,8 @@ use Ephect\Forms\Registry\PluginRegistry;
 use Ephect\Framework\ElementUtils;
 use Ephect\Framework\Utils\File;
 
-class Plugin extends ApplicationComponent implements FileComponentInterface
+class Plugin extends Component implements FileComponentInterface
 {
-
-    public function load(?string $filename = null): bool
-    {
-        $this->filename = $filename ?: '';
-
-        $this->code = File::safeRead(PLUGINS_ROOT . $this->filename);
-
-        [$this->namespace, $this->function, $parameters, $returnType, $this->bodyStartsAt] = ElementUtils::getFunctionDefinition($this->code);
-        if ($this->function === null) {
-            [$this->namespace, $this->function, $this->bodyStartsAt] = ElementUtils::getClassDefinition($this->code);
-        }
-        return $this->code !== null;
-    }
 
     public function makeComponent(string $filename, string &$html): void
     {
@@ -30,17 +17,10 @@ class Plugin extends ApplicationComponent implements FileComponentInterface
 
     public function analyse(): void
     {
-        parent::analyse();
+        ApplicationComponent::analyse();
 
         PluginRegistry::write($this->getFullyQualifiedFunction(), $this->getSourceFilename());
         ComponentRegistry::safeWrite($this->getFunction(), $this->getFullyQualifiedFunction());
-    }
-
-    public function parse(): void
-    {
-        parent::parse();
-
-        $this->cacheHtml();
     }
 
 }
