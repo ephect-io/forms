@@ -3,9 +3,9 @@
 namespace Ephect\Forms\Components\Generators\TokenParsers;
 
 use Ephect\Forms\Components\ComponentEntityInterface;
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Middlewares\AttributeMiddlewareInterface;
 use Ephect\Framework\Middlewares\ComponentParserMiddlewareInterface;
-use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Registry\FrameworkRegistry;
 use Ephect\Framework\Registry\StateRegistry;
 use Ephect\Framework\Utils\Text;

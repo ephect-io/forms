@@ -4,8 +4,8 @@ namespace Ephect\Forms\Components\Generators;
 
 use Ephect\Forms\Components\ComponentDeclarationStructure;
 use Ephect\Forms\Components\ComponentInterface;
-use Ephect\Framework\Crypto\Crypto;
 use Ephect\Forms\Registry\ComponentRegistry;
+use Ephect\Framework\Crypto\Crypto;
 
 
 class ComponentParser extends Parser implements ParserInterface

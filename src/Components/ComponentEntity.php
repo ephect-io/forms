@@ -2,9 +2,9 @@
 
 namespace Ephect\Forms\Components;
 
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\ElementTrait;
 use Ephect\Framework\Entity\Entity;
-use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\Tree\TreeTrait;
 use Ephect\Framework\Utils\File;
 

@@ -3,8 +3,8 @@
 namespace Ephect\Forms\Components\Application;
 
 use Ephect\Forms\Components\ComponentInterface;
-use Ephect\Forms\Registry\PluginRegistry;
 use Ephect\Forms\Registry\ComponentRegistry;
+use Ephect\Forms\Registry\PluginRegistry;
 use Ephect\Framework\Utils\File;
 
 class ComponentsCopier

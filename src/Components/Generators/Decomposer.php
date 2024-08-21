@@ -4,9 +4,9 @@ namespace Ephect\Forms\Components\Generators;
 
 use Ephect\Forms\Components\ComponentDeclarationStructure;
 use Ephect\Forms\Components\ComponentInterface;
+use Ephect\Forms\Registry\ComponentRegistry;
 use Ephect\Framework\CLI\Console;
 use Ephect\Framework\Crypto\Crypto;
-use Ephect\Forms\Registry\ComponentRegistry;
 
 class Decomposer extends Parser implements ParserInterface
 {
