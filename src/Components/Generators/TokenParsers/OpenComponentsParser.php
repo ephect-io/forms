@@ -84,8 +84,8 @@ final class OpenComponentsParser extends AbstractComponentParser
                 $preComponentBody .= "\t\t\t} ?>\n";
             }
 
-            $componentRender = "<?php \$struct = new \\Ephect\\Framework\\Components\\ChildrenStructure(['props' => (object) $props, 'buffer' => function()$useChildren{?>\n\n$preComponentBody$componentBody\n<?php\n}, 'motherUID' => '$motherUID', 'uid' => '$uid', 'class' => '$className', 'name' => '$name', 'parentProps' => $classArgs]);\n";
-            $componentRender .= "\t\t\t{$pkey} = new \\Ephect\\Framework\\Components\\Children(\$struct);\n";
+            $componentRender = "<?php \$struct = new \\Ephect\\Forms\\Components\\ChildrenStructure(['props' => (object) $props, 'buffer' => function()$useChildren{?>\n\n$preComponentBody$componentBody\n<?php\n}, 'motherUID' => '$motherUID', 'uid' => '$uid', 'class' => '$className', 'name' => '$name', 'parentProps' => $classArgs]);\n";
+            $componentRender .= "\t\t\t{$pkey} = new \\Ephect\\Forms\\Components\\Children(\$struct);\n";
             $componentRender .= "\t\t\t\$fn = \\$fqComponentName({$pkey}); \$fn(); ?>\n";
 
             $preg_opener = preg_quote($opener, '/');
