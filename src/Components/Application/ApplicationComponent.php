@@ -203,7 +203,7 @@ abstract class ApplicationComponent extends Tree implements FileComponentInterfa
     /**
      * @throws ReflectionException
      */
-    public function render(?array $functionArgs = null, ?Request $request = null): void
+    public function render(array|object|null $functionArgs = null, ?Request $request = null): void
     {
         if ($this->motherUID == $this->uid && $this->id !== 'App') {
             StateRegistry::loadByMotherUid($this->motherUID, true);
@@ -217,7 +217,7 @@ abstract class ApplicationComponent extends Tree implements FileComponentInterfa
         echo ComponentRenderer::renderHTML($cacheFilename, $fqFunctionName, $functionArgs, $request);
     }
 
-    public function renderComponent(string $motherUID, string $functionName, ?array $functionArgs = null): array
+    public function renderComponent(string $motherUID, string $functionName, array|object|null $functionArgs = null): array
     {
         [$fqFunctionName, $cacheFilename, $isCached] = ComponentFinder::find($functionName, $motherUID);
         if (!$isCached) {

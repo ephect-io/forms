@@ -30,9 +30,11 @@ final class OpenComponentsParser extends AbstractComponentParser
             $parent = $previous != null && $previous->getDepth() < $item->getDepth() ? $previous : null;
 
             if (!$item->hasCloser()) {
-                $p = new ClosedComponentsParser($comp);
-                $p->do([$parent, $item]);
-
+                /**
+                 * Probably the cause of the bug.
+                 */
+//                $p = new ClosedComponentsParser($comp);
+//                $p->do([$parent, $item]);
                 return;
             }
             $uid = $item->getUID();
@@ -115,12 +117,17 @@ final class OpenComponentsParser extends AbstractComponentParser
 
         $closure($cmpz, 0);
         if ($cmpz->hasChildren()) {
-            $parent = $cmpz;
+            /**
+             * Probably part of the problem.
+             */
+            // $parent = $cmpz;
+
             $cmpz->forEach($closure, $cmpz);
         }
 
         $this->html = $subject;
     }
+
 
 
     private function argumentsKeys(array $componentArgs): ?array
