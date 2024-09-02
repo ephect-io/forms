@@ -5,7 +5,7 @@ namespace Ephect\Forms\Components\Application;
 trait ComponentCodeTrait
 {
     protected ?string $filename = '';
-    protected ?string $code;
+    protected ?string $code = '';
     protected int $bodyStartsAt = 0;
 
     public function getCode(): ?string
