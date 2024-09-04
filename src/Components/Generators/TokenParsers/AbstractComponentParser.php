@@ -38,12 +38,11 @@ abstract class AbstractComponentParser extends AbstractTokenParser
     public function declareMiddlewares(ComponentEntityInterface|null $parent, string $motherUID, string $funcName, string $props): void
     {
         /**
-         * Probably what prevents the middleware from working
-         * since the parent is now always null.
+         * Mandatory test: Parent is not always null!
          */
-//        if ($parent == null) {
-//            return;
-//        }
+        if ($parent == null) {
+            return;
+        }
 
         $filename = $motherUID . DIRECTORY_SEPARATOR . ComponentRegistry::read($funcName);
 
@@ -80,7 +79,9 @@ abstract class AbstractComponentParser extends AbstractTokenParser
                         $middleware->parse($parent, $motherUID, $funcName, $props, $arguments);
                     }
 
-                    StateRegistry::saveByMotherUid($motherUID, true);
+//                    StateRegistry::saveByMotherUid($motherUID, true);
+                    StateRegistry::save(true);
+
 
                 }
 

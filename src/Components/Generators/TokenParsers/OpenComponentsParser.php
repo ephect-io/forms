@@ -31,10 +31,10 @@ final class OpenComponentsParser extends AbstractComponentParser
 
             if (!$item->hasCloser()) {
                 /**
-                 * Probably the cause of the bug.
+                 * Mandatory for middleware parsing...
                  */
-//                $p = new ClosedComponentsParser($comp);
-//                $p->do([$parent, $item]);
+                $p = new ClosedComponentsParser($comp);
+                $p->do([$parent, $item]);
                 return;
             }
             $uid = $item->getUID();
@@ -117,11 +117,7 @@ final class OpenComponentsParser extends AbstractComponentParser
 
         $closure($cmpz, 0);
         if ($cmpz->hasChildren()) {
-            /**
-             * Probably part of the problem.
-             */
-            // $parent = $cmpz;
-
+            $parent = $cmpz;
             $cmpz->forEach($closure, $cmpz);
         }
 

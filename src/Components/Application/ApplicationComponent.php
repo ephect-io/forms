@@ -205,16 +205,26 @@ abstract class ApplicationComponent extends Tree implements FileComponentInterfa
      */
     public function render(array|object|null $functionArgs = null, ?Request $request = null): void
     {
-        if ($this->motherUID == $this->uid && $this->id !== 'App') {
-            StateRegistry::loadByMotherUid($this->motherUID, true);
-            $stateIgniter = new ApplicationIgniter;
-            $stateIgniter->ignite();
+//        if ($this->motherUID == $this->uid && $this->id !== 'App') {
+//            StateRegistry::loadByMotherUid($this->motherUID, true);
+        StateRegistry::load(true);
+        $stateIgniter = new ApplicationIgniter;
+        $stateIgniter->ignite();
+//        }
 
-        }
+//        $trueStaticFile = STATIC_DIR . pathinfo($this->filename, PATHINFO_FILENAME) . PREHTML_EXTENSION;
+//        if ($html = File::safeRead($trueStaticFile) != null && $this->motherUID == $this->uid && $this->id !== 'App')  {
+//            echo $html;
+//            return;
+//        }
 
         [$fqFunctionName, $cacheFilename] = $this->renderComponent($this->motherUID, $this->function, $functionArgs);
+        $html = ComponentRenderer::renderHTML($cacheFilename, $fqFunctionName, $functionArgs, $request);
+        if ($this->motherUID == $this->uid && $this->id !== 'App') {
+            File::safeWrite(STATIC_DIR . $this->filename, $html);
+        }
+        echo $html;
 
-        echo ComponentRenderer::renderHTML($cacheFilename, $fqFunctionName, $functionArgs, $request);
     }
 
     public function renderComponent(string $motherUID, string $functionName, array|object|null $functionArgs = null): array
